@@ -1,0 +1,18 @@
+DEVICES:
+  DEVICE:
+    ID: 1  
+    NAME: SUT
+    TYPE: SUT
+    CONN_TYPE: SSH
+    CONN_PORT: 22
+    USER: falish
+    PASS: pass
+
+  DEVICE:
+    ID: 2
+    NAME: BIOS-SER
+    TYPE: SERIAL
+    CONN_TYPE: COM
+    CONN_PORT: 100
+
+
