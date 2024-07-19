@@ -1,18 +1,16 @@
 DEVICES:
-  DEVICE:
+  SUT:
     ID: 1  
-    NAME: SUT
     TYPE: SUT
     CONN_TYPE: SSH
     CONN_PORT: 22
+    IP: 192.168.226.128
     USER: falish
     PASS: pass
 
-  DEVICE:
+  BIOS-SER:
     ID: 2
-    NAME: BIOS-SER
     TYPE: SERIAL
     CONN_TYPE: COM
     CONN_PORT: 100
-
 

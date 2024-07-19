@@ -19,9 +19,9 @@ class FunkyLogger:
     def __init__(self, logPath) -> None:
         self._logName = "MAIN"
         self._logger = self.create_logger(name=self._logName)
-        sHandler = logging.StreamHandler(sys.stdout)
-        self._logger.addHandler(sHandler)
-        sHandler.setFormatter(self.formatter)
+        self.sHandler = logging.StreamHandler(sys.stdout)
+        self._logger.addHandler(self.sHandler)
+        self.sHandler.setFormatter(self.formatter)
         self._logger.info("Logger Created SuccessFully!!")
     
     def create_logger(self, name):
@@ -42,6 +42,7 @@ class FunkyLogger:
         fHandler = logging.FileHandler(f"{logPath}\\{logName}.log", mode='w')
         fHandler.setFormatter(self.formatter)
         logger.addHandler(fHandler)
+        logger.addHandler(self.sHandler)
 
     def set_level(self, logger, level):
         logger.setLevel(log_level_map.get(level, logging.INFO))
