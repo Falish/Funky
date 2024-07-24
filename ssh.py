@@ -51,7 +51,7 @@ class SSHClient:
 
     def exec_command_async(self, command, timeout=200):
         """
-            Execute comamdn using screen module 
+            Execute comamnd using screen module 
         """
 
 if __name__ == "__main__":

@@ -34,9 +34,15 @@ class devYamlParser(yamlParser):
         """
             
         """
+        dev_list = []
         self.logger.info(self.cfg)
-        for i in self.cfg["DEVICES"]:
-            self.logger.info(i)
+        if device_type is None:
+            return self.cfg["DEVICES"]
+        else:
+            for i in self.cfg["DEVICES"]:
+                if i == device_type:
+                    dev_list.append(self.cfg["DEVICES"][i])
+            return dev_list
 
 class runCfgParser(yamlParser):
     def __init__(self, config_file, logger) -> None:

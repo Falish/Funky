@@ -15,7 +15,7 @@ class Tester:
         self.runYamlParser = yamlParser.runCfgParser(self.runConfig, self.logger)
         self.logger.info("Main Tester Started!!!")
 
-        self.devYamlParser.get_devices()
+        self.logger.info(self.devYamlParser.get_devices(device_type="SUT"))
 
     def argsParser(self):
         """
